@@ -4,9 +4,20 @@
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 5; i++) 
+            int size = 5;
+
+            for (int i = 0; i < size; i++)
             {
-                Console.Write("*");
+                Console.Write($"{i + 1}열:");
+                for (int j = 0; j < size - (i+1); j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.WriteLine();
             }
         }
     }
